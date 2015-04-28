@@ -22,6 +22,29 @@ public class GreetingController {
         return "index";
     }
     
+    @RequestMapping("/configure")
+    public String configure(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "underConstruction";
+    }
+    
+    @RequestMapping("/discover")
+    public String discover(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "underConstruction";
+    }
+    
+    @RequestMapping("/history")
+    public String history(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "underConstruction";
+    }
+    
+    @RequestMapping("/filterHistory")
+    public String filterHistory(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "underConstruction";
+    }
     
     @RequestMapping("/submitTicker")
     public String submitTicker(@RequestParam(value="ticker", required=false, defaultValue="EMC") String ticker, Model model) {
@@ -51,6 +74,12 @@ public class GreetingController {
         model.addAttribute("recommendation", td.getRecommendation());
        
         return "results";
+    }
+    
+    @RequestMapping("/getMacroEconData")
+    public String macroData(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
+        return "macroData";
     }
     
 }
