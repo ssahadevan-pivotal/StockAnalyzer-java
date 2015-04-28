@@ -12,6 +12,7 @@ public class TickerData {
     private String pe;
     private String qRevGrowth;
     private String divYield;
+    private String isPeOk;
         
     public String getTicker() {
         return ticker;
@@ -67,6 +68,9 @@ public class TickerData {
         return divYield;
     }
     
+    public String getIsPeOk() {
+        return isPeOk;
+    }
     
     
       

@@ -28,16 +28,29 @@
          
 
 <p class="ex1"></p>
-<b> <p th:text="'Results for Ticker ' + ${ticker} +  '!' "   /> </b> 
-
-<p th:text="'TickerName is ' + ${tickerName} +  ',' "   /> 
-<p th:text="'Recommendation is ' + ${recommendation} +  ',' "   /> 
-<p th:text="'Price =  ' + ${price} +  '!' "   /> 
-<p th:text="'pe = ' + ${pe} +  ',' "   /> 
-<p th:text="'Yield = ' + ${yield} +  ' ' "   /> 
+<b> <p th:text="'Results for ' + ${tickerName} +  '!' "   /> </b> 
 
 &nbsp;&nbsp;
-    
+ <div align="center">
+       <table id="box-table-a" summary="CurrentConfiguration">
+                <thead>
+                    <tr>
+                        <th scope="col">Price</th>
+                        <th scope="col">pe</th>
+                        <th scope="col">Yield</th>
+                        <th scope="col">Recommendation</th>     
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>  <p th:text="${price}"   /> </td>
+                        <td>  <p th:text="${pe}" /> </td>
+                        <td>  <p th:text="${yield}" /> </td>
+                        <td>  <p th:text="${recommendation}" /> </td>
+ 				    </tr>
+                </tbody>
+                </table>            
+            </div>   
 
 
 </div>

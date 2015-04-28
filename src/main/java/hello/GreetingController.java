@@ -64,6 +64,7 @@ public class GreetingController {
         System.out.println("*** TickerData for " + td.getTickerName() + " at  " + td.getPrice() 
           		  + ",yield=" + td.getDivYield() 
           		  + ",pe=" + td.getPe()
+          		  + ",isPeOk=" + td.getIsPeOk()
           		  +",qRevGrowth= "+ td.getQRevGrowth()
           		  + ", recommendation=" + td.getRecommendation()  );
         
@@ -71,6 +72,7 @@ public class GreetingController {
         model.addAttribute("price", td.getPrice());
         model.addAttribute("yield", td.getDivYield());
         model.addAttribute("pe", td.getPe());
+        model.addAttribute("isPeOk", td.getIsPeOk());
         model.addAttribute("recommendation", td.getRecommendation());
        
         return "results";
