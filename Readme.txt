@@ -15,6 +15,7 @@ This is the initial Commit.  I will be building out additional functionality ove
 A version of this in python runs on the Google App Engine at http://analyze-stock.appspot.com/
 
 From Eclipse:
+mvn clean
 mvn package
 
 
